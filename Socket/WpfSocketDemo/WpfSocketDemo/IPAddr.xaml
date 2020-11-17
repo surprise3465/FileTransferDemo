@@ -1,0 +1,51 @@
+﻿<Window
+    x:Class="WpfSocketDemo.IPAddr"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:local="clr-namespace:WpfSocketDemo"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    Title="IPAddr"
+    Width="600"
+    Height="300"
+    ResizeMode="NoResize"
+    WindowStartupLocation="CenterScreen"
+    mc:Ignorable="d">
+    <Grid>
+        <DataGrid
+            x:Name="IPAddrDataGrid"
+            AutoGenerateColumns="False"
+            Background="White"
+            BorderThickness="1"
+            CanUserAddRows="False"
+            HeadersVisibility="Column"
+            SelectionMode="Extended">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Width="60" Header="Selcet">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button
+                                Background="White"
+                                Click="btnSelect"
+                                Content="Select"
+                                Foreground="Black" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTextColumn
+                    Width="120"
+                    Binding="{Binding Address, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    Header="IP Address" />
+                <DataGridTextColumn
+                    Width="120"
+                    Binding="{Binding PhysicalAddress, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    Header="Mac Addr" />
+                <DataGridTextColumn
+                    Width="*"
+                    Binding="{Binding Description, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                    Header="Description" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

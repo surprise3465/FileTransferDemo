@@ -1,0 +1,29 @@
+﻿<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:WpfSocketDemo">
+    <Style x:Key="ListViewItemStyle" TargetType="{x:Type ListViewItem}">
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+    </Style>
+
+    <LinearGradientBrush x:Key="LinearGradientBlueBackground" StartPoint="0.5,0" EndPoint="0.5,1">
+        <GradientStop Offset="0" Color="#FF5EAEFF" />
+        <GradientStop Offset="1" Color="#FF679AF0" />
+    </LinearGradientBrush>
+
+    <SolidColorBrush x:Key="MyBtnBorderColor" Color="#FF6091E4" />
+
+    <SolidColorBrush x:Key="MyBtnHoverBackgroundColor" Color="#FF5EAEFF" />
+
+
+    <Style x:Key="contentCenterStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+    <Style x:Key="checkboxCenterStyle" TargetType="{x:Type CheckBox}">
+        <Setter Property="HorizontalAlignment" Value="Center" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+    </Style>
+
+</ResourceDictionary>
